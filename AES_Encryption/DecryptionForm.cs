@@ -27,7 +27,7 @@ namespace Encryption_Decryption
 
         private void btnResult_Click(object sender, EventArgs e)
         {
-            if (this.textBoxKey.Text.Length > 10 && this.textBoxValue.Text != null)
+            if (this.textBoxKey.Text.Length > 20 && this.textBoxValue.Text != null)
             {
                 var encryptedValue = AES.AESDecrypt(textBoxValue.Text, textBoxKey.Text);
                 textBoxResult.Text = encryptedValue;
@@ -35,7 +35,7 @@ namespace Encryption_Decryption
 
             else
             {
-                System.Windows.Forms.MessageBox.Show("Key Must be gater then or equal 10");
+                System.Windows.Forms.MessageBox.Show("Key Must be gater then or equal 20");
             }
 
         }
